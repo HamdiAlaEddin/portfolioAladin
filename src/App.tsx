@@ -196,9 +196,8 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
           {/* Logo */}
           <button onClick={() => scrollTo('home')} className="flex items-center gap-2 group">
-            <span className="relative w-9 h-9 rounded-full overflow-hidden inline-block flex-shrink-0 group-hover:scale-110 transition-transform ring-2 ring-brand-500/40 shadow-md">
-              <span className="absolute inset-0 bg-gradient-to-br from-brand-500 to-terminal-cyan flex items-center justify-center text-white font-bold text-xs">HA</span>
-              <img src="/photo.png" alt="Hamdi Alaa Eddin" className="relative z-10 w-full h-full object-cover" onError={(e) => (e.currentTarget.style.display = 'none')} />
+            <span className="w-9 h-9 rounded-full overflow-hidden inline-block flex-shrink-0 group-hover:scale-110 transition-transform ring-2 ring-brand-500/40 shadow-md bg-gray-200 dark:bg-gray-700">
+              <img src="/photo.png" alt="Hamdi Alaa Eddin" className="w-full h-full object-cover" />
             </span>
             <span className="hidden sm:inline font-mono text-sm text-gray-500 dark:text-gray-400">~/hamdi</span>
           </button>
@@ -279,15 +278,11 @@ export default function App() {
             {/* Left — Text */}
             <div className="animate-fade-in">
               {/* Profile photo */}
-              <div className="relative w-24 h-24 rounded-full mb-8 overflow-hidden ring-4 ring-brand-500/40 shadow-2xl hover:ring-brand-500/80 hover:scale-105 transition-all duration-300">
-                <div className="absolute inset-0 bg-gradient-to-br from-brand-500 via-terminal-cyan to-brand-700 flex items-center justify-center">
-                  <span className="text-2xl font-extrabold text-white select-none">HA</span>
-                </div>
+              <div className="w-24 h-24 rounded-full mb-8 overflow-hidden ring-4 ring-brand-500/40 shadow-2xl hover:ring-brand-500/80 hover:scale-105 transition-all duration-300 bg-gray-200 dark:bg-gray-700">
                 <img
                   src="/photo.png"
                   alt="Hamdi Alaa Eddin"
-                  className="relative z-10 w-full h-full object-cover"
-                  onError={(e) => (e.currentTarget.style.display = 'none')}
+                  className="w-full h-full object-cover"
                 />
               </div>
 
@@ -442,15 +437,11 @@ export default function App() {
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Profile Card */}
             <div className="glass-card p-8 lg:col-span-1 flex flex-col items-center text-center">
-              <div className="relative w-36 h-36 rounded-full mb-6 overflow-hidden shadow-xl ring-4 ring-brand-500/30 hover:ring-brand-500/70 hover:scale-105 transition-all duration-300">
-                <div className="absolute inset-0 bg-gradient-to-br from-brand-500 via-terminal-cyan to-brand-700 flex items-center justify-center">
-                  <span className="text-5xl font-extrabold text-white tracking-wider select-none">HA</span>
-                </div>
+              <div className="w-36 h-36 rounded-full mb-6 overflow-hidden shadow-xl ring-4 ring-brand-500/30 hover:ring-brand-500/70 hover:scale-105 transition-all duration-300 bg-gray-200 dark:bg-gray-700">
                 <img
                   src="/photo.png"
                   alt="Hamdi Alaa Eddin"
-                  className="relative z-10 w-full h-full object-cover"
-                  onError={(e) => (e.currentTarget.style.display = 'none')}
+                  className="w-full h-full object-cover"
                 />
               </div>
               <h3 className="text-xl font-bold mb-1">Hamdi Alaa Eddin</h3>
