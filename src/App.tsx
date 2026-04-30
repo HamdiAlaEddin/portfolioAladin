@@ -92,10 +92,7 @@ export default function App() {
     localStorage.setItem('language', newLang);
   };
 
-  const cvLinks = {
-    en: 'https://www.linkedin.com/in/hamdi-alaa-eddin-538898229/',
-    fr: 'https://www.linkedin.com/in/hamdi-alaa-eddin-538898229/',
-  };
+  const cvDownloadUrl = 'https://drive.google.com/uc?export=download&id=153vunblLCKYOKF56lK4rFI5_opSPElrk';
 
   const t = translations[language];
 
@@ -219,7 +216,8 @@ export default function App() {
           {/* Right side */}
           <div className="flex items-center gap-3">
             <a
-              href={cvLinks[language]}
+              href={cvDownloadUrl}
+              download="Hamdi_Alaa_Eddin_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:flex items-center gap-2 px-4 py-2 text-sm font-semibold bg-gradient-to-r from-brand-600 to-brand-500 text-white rounded-lg hover:shadow-lg hover:shadow-brand-500/25 transition-all hover:scale-105"
@@ -277,6 +275,19 @@ export default function App() {
 
             {/* Left — Text */}
             <div className="animate-fade-in">
+              {/* Profile photo */}
+              <div className="relative w-24 h-24 rounded-full mb-8 overflow-hidden ring-4 ring-brand-500/40 shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-brand-500 via-terminal-cyan to-brand-700 flex items-center justify-center">
+                  <span className="text-2xl font-extrabold text-white select-none">HA</span>
+                </div>
+                <img
+                  src="/photo.png"
+                  alt="Hamdi Alaa Eddin"
+                  className="relative z-10 w-full h-full object-cover"
+                  onError={(e) => (e.currentTarget.style.display = 'none')}
+                />
+              </div>
+
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-500/10 dark:bg-brand-500/20 text-brand-600 dark:text-brand-400 text-sm font-medium mb-6 border border-brand-500/20">
                 <span className="w-2 h-2 rounded-full bg-terminal-green animate-pulse" />
                 {t.hero.badge}
@@ -428,8 +439,16 @@ export default function App() {
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Profile Card */}
             <div className="glass-card p-8 lg:col-span-1 flex flex-col items-center text-center">
-              <div className="w-36 h-36 rounded-2xl bg-gradient-to-br from-brand-500 via-terminal-cyan to-brand-700 flex items-center justify-center mb-6 shadow-lg ring-2 ring-brand-500/30">
-                <span className="text-5xl font-extrabold text-white tracking-wider select-none">HA</span>
+              <div className="relative w-36 h-36 rounded-2xl mb-6 overflow-hidden shadow-lg ring-2 ring-brand-500/30">
+                <div className="absolute inset-0 bg-gradient-to-br from-brand-500 via-terminal-cyan to-brand-700 flex items-center justify-center">
+                  <span className="text-5xl font-extrabold text-white tracking-wider select-none">HA</span>
+                </div>
+                <img
+                  src="/photo.png"
+                  alt="Hamdi Alaa Eddin"
+                  className="relative z-10 w-full h-full object-cover"
+                  onError={(e) => (e.currentTarget.style.display = 'none')}
+                />
               </div>
               <h3 className="text-xl font-bold mb-1">Hamdi Alaa Eddin</h3>
               <p className="text-brand-600 dark:text-brand-400 font-medium mb-4">{t.about.jobTitle}</p>
